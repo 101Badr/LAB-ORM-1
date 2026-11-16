@@ -15,6 +15,7 @@
             <h1>Blogger</h1>
 
             <nav>
+                
                 <a href="{% url 'posts:home' %}">Home</a>
                 <a href="{% url 'posts:add_post' %}" class="nav-button">Add Post</a>
             </nav>
@@ -27,6 +28,10 @@
     </main>
 
     <footer>
+        <a href="{% url 'posts:home' %}" class="footer-back-btn">
+    <span>←</span>
+    Back to Home
+</a>
         <p>&copy; 2026 Blogger. All rights reserved.</p>
     </footer>
 

@@ -28,7 +28,12 @@
         >
 
         <label>Content:</label>
-        <textarea name="content" required>{{ post.content }}</textarea>
+        <textarea
+    name="content"
+    class="content-textarea"
+    rows="12"
+    required
+>{{ post.content }}</textarea>
 
         <label>Change Image:</label>
         <input type="file" name="poster" accept="image/*">

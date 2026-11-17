@@ -39,6 +39,17 @@
         <input type="file" name="poster" accept="image/*">
 
         <button type="submit" class="button">Save Changes</button>
+        <label for="publisher_name">Publisher Name</label>
+
+<input
+    type="text"
+    id="publisher_name"
+    name="publisher_name"
+    value="{{ post.publisher_name }}"
+    minlength="2"
+    maxlength="100"
+    required
+>
     </form>
 
 </div>

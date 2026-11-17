@@ -13,7 +13,13 @@
 
     <h3>{{ post.title }}</h3>
 
-    <p class="post-content">{{ post.content }}</p>
+    <p class="post-publisher">
+        Published by: {{ post.publisher_name }}
+    </p>
+
+    <p class="post-content">
+        {{ post.content|linebreaksbr }}
+    </p>
 
     {% if post.poster %}
         <img
@@ -27,14 +33,14 @@
         Published: {{ post.published_at|date:"Y-m-d H:i" }}
     </div>
 
-    
-<a href="{% url 'posts:update' post.id %}" class="button">
-    Edit Post
-</a>
+    <a href="{% url 'posts:update' post.id %}" class="button">
+        Edit Post
+    </a>
 
-<a href="{% url 'posts:delete' post.id %}" class="button">
-    Delete Post
-</a>
+    <a href="{% url 'posts:delete' post.id %}" class="button">
+        Delete Post
+    </a>
+
 </article>
 
 {% endblock %}
